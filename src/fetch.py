@@ -1,7 +1,7 @@
-from bs4 import BeautifulSoup
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urlparse
 import urllib.request
 from urllib.robotparser import RobotFileParser
+from urllib.error import URLError, HTTPError
 
 
 def can_fetch_url(url: str) -> bool:
@@ -13,7 +13,7 @@ def can_fetch_url(url: str) -> bool:
     robot_parser.set_url(robots_url)
     try:
         robot_parser.read()
-    except Exception as e:
+    except (URLError, HTTPError) as e:
         print(f"Impossible de lire {robots_url}: {e}")
         return False
 
@@ -25,7 +25,7 @@ def fetch_url_content(url: str) -> str:
     try:
         with urllib.request.urlopen(url) as response:
             return response.read().decode('utf-8')
-    except Exception as e:
+    except (URLError, HTTPError) as e:
         print(f"Erreur lors de la récupération de {url}: {e}")
         return ""
 
