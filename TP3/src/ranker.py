@@ -4,7 +4,7 @@ from src.filtering import assert_all_tokens_in_index
 from src.data_loader import get_doc_feature
 import math
 
-def compute_bm25(query, document, index, k1=1.5, b=0.75):
+def compute_bm25(query_tokens, doc_feature, feature, index, k1=1.5, b=0.75):
     """
     Compute BM25 score for a document with respect to a query.
 
@@ -18,20 +18,39 @@ def compute_bm25(query, document, index, k1=1.5, b=0.75):
     Returns:
         float: The BM25 score for the document.
     """
+
     # Calculate the length of the document and the average document length
-    doc_length = len(document.split())
-    avg_doc_length = sum(len(doc.split()) for doc in index.values()) / len(index)
+    doc_length = len(doc_feature.split())
+
+
+    unique_urls = set()
+    for category in index.values():
+        # Ajouter chaque URL dans le set (les doublons seront automatiquement supprimés)
+        unique_urls.update(category.keys())
+    # Retourner le nombre d'URLs uniques
+    total_url_count = len(unique_urls)
+
+    avg_doc_length = sum(len(get_doc_feature(url,feature).split()) for url in index.keys()) / total_url_count
+
+    print('---')
+    print(doc_feature)
+    print(doc_length)
+    print(avg_doc_length) #problème
+    print(total_url_count)
     
     score = 0
-    for term in query:
+    for term in query_tokens:
+        print(term)
         # If the term exists in the document
         if term in index:
-            doc_freq = len(index[term])  # document frequency of the term
-            idf = math.log((len(index) - doc_freq + 0.5) / (doc_freq + 0.5) + 1.0)
+            doc_freq = len(index[term])  # le nombre de documents contenant term
+            idf = math.log((total_url_count - doc_freq + 0.5) / (doc_freq + 0.5) + 1.0)
             
-            tf = document.split().count(term)  # term frequency in the document
+            tf = doc_feature.lower().split().count(term)  # term frequency in the document
             score += idf * (tf * (k1 + 1)) / (tf + k1 * (1 - b + b * doc_length / avg_doc_length))
-    
+
+            print(idf, tf, score)
+
     return score
 
 
@@ -55,17 +74,17 @@ def rank_documents(query, feature):
     scores = {}
 
     for index_value, dict_value in filtered_index.items():
-        print('================')
-        print(index_value,'||||', dict_value)
+        # print('================')
+        # print(index_value,'||||', dict_value)
 
         for doc_url in dict_value.keys():
 
             doc_feature = get_doc_feature(doc_url, feature)
 
             # Calculer le score BM25 pour chaque document
-            score = compute_bm25(query_tokens, doc_feature, filtered_index)
+            score = compute_bm25(query_tokens, doc_feature, feature, filtered_index ) #probleme
             
-            if assert_all_tokens_in_index(query_tokens, index_value):
+            if assert_all_tokens_in_index(query_tokens, doc_feature):
                 score += 10  # Bonus pour les matchs exacts
 
             # Ajouter le score dans le dictionnaire des scores
