@@ -1,4 +1,1 @@
-*.pdf
-*.json
-*.txt
 __pycache__/

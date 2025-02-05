@@ -1,7 +1,7 @@
-import json
 from queue import PriorityQueue
 from src.fetch import fetch_url_content, can_fetch_url
 from src.parser import parse_html_content
+from src.data_export import save_results_to_json
 
 class WebCrawler:
     """Crawler web qui parcourt les pages à partir d'une URL de départ.
@@ -61,14 +61,7 @@ class WebCrawler:
 
 
         print("\nCrawling terminé !")
-        self.save_results_to_json()
+        save_results_to_json(data_to_export=self.crawled_data)
 
 
-    def save_results_to_json(self, filename="results.json"):
-        """Sauvegarde les résultats du crawl dans un fichier JSON."""
-        try:
-            with open(filename, 'w', encoding='utf-8') as json_file:
-                json.dump(self.crawled_data, json_file, ensure_ascii=False, indent=4)
-            print(f"Résultats sauvegardés dans {filename}")
-        except (IOError, OSError) as e:
-            print(f"Erreur lors de la sauvegarde des résultats: {e}")
+
