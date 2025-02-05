@@ -28,7 +28,6 @@ Le résultat est sauvegardé dans le fichier `results-TP1.json`.
 # Indexation-web (TP2)
 
 
-
 ## Description
 
 Ce projet crée des index inversé à partir d'un document semblable à celui généré par le TP1
@@ -47,22 +46,22 @@ python TP2/main.py
 
 Le projet inclut trois types principaux d'indices, chacun ayant une structure spécifique :
 
-### 1. **Position Index**  
+### 1. **Title/Description Index**  
 Un index inversé qui associe chaque mot aux positions où il apparaît dans un document spécifique.
 
 ```python
-{
-    "mot": [
-        {"url": "page_url", "position": 0},
-        {"url": "page_url", "position": 3}
-    ]   
-}
+"box": [
+    {"url": "https://web-scraping.dev/product/1", "position": 0},
+    {"url": "https://web-scraping.dev/product/13", "position": 3}
+]   
+
 ```
 
 ### 2. **Review Index**  
+Cet index stocke les informations sur les avis de produits. Il inclut le nombre d'avis, la note moyenne et la dernière note laissée.
 ```python
 {
-    "url": {
+    "https://web-scraping.dev/product/1": {
         "total_reviews": 10,
         "average_rating": 4.5,
         "last_rating": 5
@@ -70,4 +69,21 @@ Un index inversé qui associe chaque mot aux positions où il apparaît dans un 
 }
 ```
 
-Pas fiini
+### 3. **Feature Index**  
+Un index inversé qui associe une caractéristique de produit (par exemple, la marque) à des URL de documents.
+
+```python
+{
+    "ChocoDelight": [
+        "https://web-scraping.dev/product/1",
+        "https://web-scraping.dev/product/13"
+    ],
+    "GameFuel": [
+        "https://web-scraping.dev/product/16",
+        "https://web-scraping.dev/product/14",
+        "https://web-scraping.dev/product/14?variant=one",
+        "https://web-scraping.dev/product/14?variant=six-pack",
+
+    ]
+}
+```
