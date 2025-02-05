@@ -1,16 +1,15 @@
 from .tokenizer import tokenize
 
-def assert_one_token(query, index_key):
+def assert_one_token(query_tokens, index_key):
     """Vérifie si au moins un token de la requête est présent dans l'index.
     
     Args:
-        query (str): La requête à vérifier
+        query_tokens (list) : Une liste de tokens
         index_key (str): Une clé de l'index à comparer avec les tokens de la requête.
         
     Returns:
         bool: True si au moins un token est trouvé, False sinon
     """
-    query_tokens = tokenize(query)
     index_tokens = tokenize(index_key)
 
     for token in query_tokens:
@@ -19,12 +18,12 @@ def assert_one_token(query, index_key):
     return False
 
 
-def assert_all_tokens_in_index(query, index_key):
+def assert_all_tokens_in_index(query_tokens, index_key):
     """
     Vérifie si tous les tokens de la requête sont présents dans une clé de l'index.
     
     Args:
-        query (str): La requête à vérifier, composée de plusieurs mots ou tokens.
+        query_tokens (list): liste de token lié à la query
         index_key (str): Une clé de l'index à comparer avec les tokens de la requête.
     
     Returns:
@@ -33,7 +32,6 @@ def assert_all_tokens_in_index(query, index_key):
             - False sinon.
     """
 
-    query_tokens = tokenize(query)
     index_tokens = tokenize(index_key)
     
     for token in query_tokens:
@@ -41,13 +39,13 @@ def assert_all_tokens_in_index(query, index_key):
             return False
     return True
 
-def filter_index(query, index):
+def filter_index(query_tokens, index):
     """
     Filtre un index en fonction d'une requête, en retournant les clés de l'index 
     où au moins un token de la requête est trouvé.
     
     Args:
-        query (str): La requête utilisateur.
+        query_tokens (list): 
         index (dict): L'index à filtrer (clé: chaîne, valeur: données associées).
     
     Returns:
@@ -57,7 +55,7 @@ def filter_index(query, index):
 
     for index_key, value in index.items():
         # Appliquer les critères de filtrage
-        if assert_one_token(query, index_key):
+        if assert_one_token(query_tokens, index_key):
             filtered_index[index_key] = value
     
     return filtered_index

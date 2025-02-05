@@ -1,5 +1,6 @@
 from src.data_loader import load_json_index, load_synonyms
 from src.filtering import filter_index
+from src.tokenizer import tokenize
 
 def expand_query_with_synonyms(query):
     """
@@ -11,24 +12,31 @@ def expand_query_with_synonyms(query):
 
     Returns:
         list: An expanded list of query tokens, including synonyms.
+
+    Exemple:
+        >>> expand_query_with_synonyms("USA Box" 
+        ['united states', 'usa', 'box', 'united states of america', 'america']    
     """
-    expanded_query = set(query)
+
+    synonyms=load_synonyms()
     
-    for token in query:
+    tokenized_query = tokenize(query)
+    expanded_query = set(tokenized_query)
+
+    for token in tokenized_query:
         if token in synonyms:
             expanded_query.update(synonyms[token])
     
     return list(expanded_query)
 
 
-def search(query):
+def search(query, feature):
 
+    index= load_json_index(feature)
+    expanded_query=expand_query_with_synonyms(query)
 
-    index= load_json_index("title")
+    filtered_index= filter_index(expanded_query, index)
 
-    for query in 
-
-    filtered_index= filter_index(query, index)
     return filtered_index
 
 
