@@ -5,12 +5,11 @@ from src.indexer import build_position_index, build_reviews_index, build_feature
 from src.data_export import export_data
 
 if __name__ == "__main__":
-    
+    # Chargement des données depuis le fichier JSONL
+    data = load_json("products.jsonl")
+
     # Définition du chemin d'export pour les index inversés
     EXPORT_PATH = os.path.join(os.path.dirname(__file__), "data", "inverted_indexes")
-
-    # Chargement des données depuis le fichier JSONL
-    data = load_json(file_path=os.path.join(os.path.dirname(__file__), "./data/products.jsonl"))
 
     # Construction et export de l'index des titres
     title_index = build_position_index(data, "title")

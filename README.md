@@ -22,7 +22,7 @@ Pour utiliser le crawler, exécutez le fichier `main.py` avec Python.
 
 ## Résultat
 
-Le résultat est sauvegardé dans le fichier `results-TP1.json`.
+Le résultat est sauvegardé dans le fichier `TP1/data/results-TP1.json`.
 
 
 # Indexation-web (TP2)
@@ -87,3 +87,6 @@ Un index inversé qui associe une caractéristique de produit (par exemple, la m
     ]
 }
 ```
+Ces fichiers sont sauvegardés dans le dossier `TP2/data/inverted_indexes`.
+
+# Indexation-web (TP3)
