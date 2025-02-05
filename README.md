@@ -13,7 +13,7 @@ Ce projet est un crawler web qui parcourt les pages à partir d'une URL de dépa
 git clone https://github.com/Max32x/Indexation-web
 cd Indexation-web
 pip install -r requirements.txt
-python main.py
+python TP1/main.py
 ```
 
 ## Utilisation
@@ -27,7 +27,23 @@ Le résultat est sauvegardé dans le fichier `results-TP1.json`.
 
 # Indexation-web (TP2)
 
-## Structure des indices
+
+
+## Description
+
+Ce projet crée des index inversé à partir d'un document semblable à celui généré par le TP1
+
+
+## Installation
+
+```bash
+git clone https://github.com/Max32x/Indexation-web
+cd Indexation-web
+pip install -r requirements.txt
+python TP2/main.py
+```
+
+## Résultat (Structure des indices)
 
 Le projet inclut trois types principaux d'indices, chacun ayant une structure spécifique :
 
@@ -53,3 +69,5 @@ Un index inversé qui associe chaque mot aux positions où il apparaît dans un 
     }
 }
 ```
+
+Pas fiini
