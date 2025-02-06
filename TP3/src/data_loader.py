@@ -49,6 +49,19 @@ def load_synonyms():
 def get_doc_feature(url, feature):
     # Ouvrir le fichier JSONL et lire les lignes
 
+    if feature == "reviews" :
+        base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        file_path = os.path.join(base_path, "data", "reviews_index.json")
+        with open(file_path, 'r', encoding='utf-8') as file:
+            data = json.loads(file)
+
+            # Check if the URL matches and return the mean mark
+            if url in data:
+                return data[url]['mean_mark']
+            else:
+                return None  # URL not found in the data
+
+
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     file_path = os.path.join(base_path, "data", "rearranged_products.jsonl")
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -58,7 +71,14 @@ def get_doc_feature(url, feature):
             
             # Si l'URL correspond, renvoyer la valeur de la feature demandée
             if data['url'] == url:
-                return data.get(feature, "Feature non trouvée")
+
+                if feature in ["title","description"]:
+                    return data.get(feature)
+
+                else :
+                    return data.get("product_features").get(feature)
+                
+                return None
     
     # Si l'URL n'est pas trouvée dans le fichier
     return "URL non trouvée"

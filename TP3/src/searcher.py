@@ -30,11 +30,10 @@ def expand_query_with_synonyms(query):
     return list(expanded_query)
 
 
-def search(query, feature):
+def search_feature(query, feature):
 
     index= load_json_index(feature)
     expanded_query=expand_query_with_synonyms(query)
-
     filtered_index= filter_index(expanded_query, index)
 
     return filtered_index

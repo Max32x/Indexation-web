@@ -1,4 +1,4 @@
-from src.searcher import search
+from src.searcher import search_feature
 from src.tokenizer import tokenize
 from src.filtering import assert_all_tokens_in_index
 from src.data_loader import get_doc_feature
@@ -25,22 +25,33 @@ def compute_bm25(query_tokens, doc_feature, feature, index, k1=1.5, b=0.75):
 
     unique_urls = set()
     for category in index.values():
-        # Ajouter chaque URL dans le set (les doublons seront automatiquement supprimés)
-        unique_urls.update(category.keys())
+        # print(category)
+        if feature in ["title", "description"]:
+            unique_urls.update(category.keys())
+        else :
+            unique_urls.update(category)
+
     # Retourner le nombre d'URLs uniques
     total_url_count = len(unique_urls)
 
-    avg_doc_length = sum(len(get_doc_feature(url,feature).split()) for url in index.keys()) / total_url_count
+    # Calculate the total length of all documents
+    total_length = sum(len(get_doc_feature(url, feature).split()) for url in index.keys())
 
-    print('---')
-    print(doc_feature)
-    print(doc_length)
-    print(avg_doc_length) #problème
-    print(total_url_count)
+    # Compute the average document length
+    avg_doc_length = total_length / total_url_count
+
+
+    # avg_doc_length = sum(len(get_doc_feature(url,feature).split()) for url in index.keys()) / total_url_count
+
+    # print('---')
+    # print(doc_feature)
+    # print(doc_length)
+    # print(avg_doc_length) #problème
+    # print(total_url_count)
     
     score = 0
     for term in query_tokens:
-        print(term)
+        # print(term)
         # If the term exists in the document
         if term in index:
             doc_freq = len(index[term])  # le nombre de documents contenant term
@@ -49,12 +60,12 @@ def compute_bm25(query_tokens, doc_feature, feature, index, k1=1.5, b=0.75):
             tf = doc_feature.lower().split().count(term)  # term frequency in the document
             score += idf * (tf * (k1 + 1)) / (tf + k1 * (1 - b + b * doc_length / avg_doc_length))
 
-            print(idf, tf, score)
+            # print(idf, tf, score)
 
     return score
 
 
-def rank_documents(query, feature):
+def rank_documents_feature(query, feature):
     """
     Classe les documents de l'index en fonction de leur pertinence par rapport à une requête.
 
@@ -66,56 +77,78 @@ def rank_documents(query, feature):
         list: Une liste de documents classés par pertinence (score BM25).
     """
 
-    filtered_index = search(query, feature)
+    filtered_index = search_feature(query, feature)
     query_tokens = tokenize(query)
 
-    print(filtered_index)
+    # print(filtered_index)
 
     scores = {}
 
-    for index_value, dict_value in filtered_index.items():
-        # print('================')
-        # print(index_value,'||||', dict_value)
-
-        for doc_url in dict_value.keys():
-
+    for _, list_urls in filtered_index.items():
+        # if feature = title or description, list_urls is a dict, it's a list otherwise
+        for doc_url in (list_urls.keys() if feature in ["title", "description"] else list_urls): 
             doc_feature = get_doc_feature(doc_url, feature)
+            score = compute_bm25(query_tokens, doc_feature, feature, filtered_index)
 
-            # Calculer le score BM25 pour chaque document
-            score = compute_bm25(query_tokens, doc_feature, feature, filtered_index ) #probleme
-            
+            # print(query_tokens,'||||', doc_feature)
+
             if assert_all_tokens_in_index(query_tokens, doc_feature):
                 score += 10  # Bonus pour les matchs exacts
 
-            # Ajouter le score dans le dictionnaire des scores
+            print(score)
+
             scores[doc_url] = score
 
-    # Trier les documents par score décroissant
-    ranked_docs = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+    return scores
+
+
+
+
+def rank_documents(query):
+    """
+    Classe les documents de l'index en fonction de leur pertinence par rapport à une requête en utilisant différentes features pondérées.
+
+    Args:
+        query (str): La requête de l'utilisateur.
+
+    Returns:
+        list: Une liste de documents classés par pertinence.
+    """
+    FEATURES = ["title", "description", "brand", "domain"]
+
+    COEFFICIENTS = {
+        "title": 10,
+        "description": 5,
+        "brand": 8,
+        "domain": 20
+        # "origin": 2,
+        # "reviews": 1
+    }
+
+    total_scores = {}
+
+    for feature in FEATURES:
+
+        print('======================')
+        print(feature)
     
+
+        # Calculer les scores pour chaque feature
+        feature_scores = rank_documents_feature(query, feature)
+        print(sorted(feature_scores.items(), key=lambda x: x[1], reverse=True))
+
+        # Ajouter les scores pondérés pour chaque URL
+        for doc_url, score in feature_scores.items():
+            if doc_url not in total_scores:
+                
+                mean_mark = get_doc_feature(doc_url, "review")
+                if mean_mark:
+                    total_scores[doc_url] = mean_mark/5
+                total_scores[doc_url] = 0
+
+            total_scores[doc_url] += score * COEFFICIENTS[feature]
+
+    # Trier les documents par score décroissant
+    ranked_docs = sorted(total_scores.items(), key=lambda x: x[1], reverse=True)
+
     return ranked_docs
-
-
-
-
-
-
-
-# def rank_documents(query, feature, index):
-
-#     documents= search(query,feature)
-
-#     avgdl = sum(len(doc['description'].split()) for doc in documents) / len(documents)
-
-#     query_terms = tokenize(query)
-#     ranked_results = []
-
-#     for doc in documents:
-#         score = compute_bm25(query_terms, doc['description'], index, avgdl)
-#         if assert_all_tokens_in_index(query_terms, doc['description']):
-#             score += 10  # Bonus pour les matchs exacts
-#         ranked_results.append((doc, score))
-
-#     # Trier par score décroissant
-#     ranked_results.sort(key=lambda x: x[1], reverse=True)
-#     return ranked_results
