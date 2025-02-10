@@ -144,15 +144,20 @@ python TP3/main.py
 
 Pour classer les documents en fonction d'une requête, lancez simplement le fichier `main.py`. L'algorithme calcule les scores BM25 en fonction des différentes caractéristiques des documents, leur position dans les descriptions et leur pertinence globale.
 
-### Fonctionnalités principales
+## Résultats
 
-- **Recherche par feature** : Les documents sont filtrés en fonction des features disponibles (titre, description, marque, domaine).
-- **Scoring BM25** : L'algorithme BM25 est utilisé pour déterminer la pertinence des documents par rapport à une requête.
-- **Export JSON** : Les résultats sont exportés dans un fichier JSON contenant les titres, URL, descriptions, scores et métadonnées.
+Les résultats sont classé par pertinence selon l'algorithme BM25. 
+
+score total = 10 * score_bm25 du titre  + 
+5 * score_bm25 de la description +
+8 * score_bm25 de la marque + 
+20 * score_bm25 du domaine + 
+note de l'article / 5
+ 
 
 ## Exemple de structure de sortie JSON
 
-```json
+```python
 {
     "query": "shoes",
     "total_documents": 20,
