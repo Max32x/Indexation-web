@@ -1,0 +1,108 @@
+{
+    "query": "orange fruit",
+    "total_documents": 17,
+    "filtered_documents": [
+        {
+            "title": "Box of Chocolate Candy - Orange small",
+            "url": "https://web-scraping.dev/product/1?variant=orange-small",
+            "description": "Choose from a variety of flavors including zesty orange and sweet cherry. Indulge your sweet tooth with our box of chocolate candy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 3.560490295664133
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange medium",
+            "url": "https://web-scraping.dev/product/25?variant=orange-medium",
+            "description": "Choose from a variety of flavors including zesty orange and sweet cherry. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy",
+            "ranking_score": 3.535333143804939
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange medium",
+            "url": "https://web-scraping.dev/product/13?variant=orange-medium",
+            "description": "Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Choose from a variety of flavors including zesty orange and sweet cherry",
+            "ranking_score": 2.8871849956567908
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange large",
+            "url": "https://web-scraping.dev/product/1?variant=orange-large",
+            "description": "Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Choose from a variety of flavors including zesty orange and sweet cherry",
+            "ranking_score": 2.8871849956567908
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange large",
+            "url": "https://web-scraping.dev/product/13?variant=orange-large",
+            "description": "Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Indulge your sweet tooth with our box of chocolate candy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 2.512932943875505
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange small",
+            "url": "https://web-scraping.dev/product/13?variant=orange-small",
+            "description": "Indulge your sweet tooth with our box of chocolate candy. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 2.512932943875505
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange medium",
+            "url": "https://web-scraping.dev/product/1?variant=orange-medium",
+            "description": "Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Indulge your sweet tooth with our box of chocolate candy",
+            "ranking_score": 2.512932943875505
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange large",
+            "url": "https://web-scraping.dev/product/25?variant=orange-large",
+            "description": "Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Indulge your sweet tooth with our box of chocolate candy",
+            "ranking_score": 2.512932943875505
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange small",
+            "url": "https://web-scraping.dev/product/25?variant=orange-small",
+            "description": "Indulge your sweet tooth with our box of chocolate candy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy",
+            "ranking_score": 2.512932943875505
+        },
+        {
+            "title": "Box of Chocolate Candy",
+            "url": "https://web-scraping.dev/product/13",
+            "description": "Choose from a variety of flavors including zesty orange and sweet cherry. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Indulge your sweet tooth with our box of chocolate candy",
+            "ranking_score": 1.0475573517886276
+        },
+        {
+            "title": "Box of Chocolate Candy - Cherry large",
+            "url": "https://web-scraping.dev/product/25?variant=cherry-large",
+            "description": "Choose from a variety of flavors including zesty orange and sweet cherry. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 1.0224001999294339
+        },
+        {
+            "title": "Box of Chocolate Candy - Cherry medium",
+            "url": "https://web-scraping.dev/product/13?variant=cherry-medium",
+            "description": "Indulge your sweet tooth with our box of chocolate candy. Choose from a variety of flavors including zesty orange and sweet cherry. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 0.6308906851219609
+        },
+        {
+            "title": "Box of Chocolate Candy - Cherry large",
+            "url": "https://web-scraping.dev/product/13?variant=cherry-large",
+            "description": "Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Choose from a variety of flavors including zesty orange and sweet cherry. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 0.4668446443738784
+        },
+        {
+            "title": "Box of Chocolate Candy - Cherry small",
+            "url": "https://web-scraping.dev/product/1?variant=cherry-small",
+            "description": "Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Choose from a variety of flavors including zesty orange and sweet cherry. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 0.4668446443738784
+        },
+        {
+            "title": "Box of Chocolate Candy - Cherry large",
+            "url": "https://web-scraping.dev/product/1?variant=cherry-large",
+            "description": "Indulge your sweet tooth with our box of chocolate candy. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Choose from a variety of flavors including zesty orange and sweet cherry",
+            "ranking_score": 0.40510265997936945
+        },
+        {
+            "title": "Box of Chocolate Candy",
+            "url": "https://web-scraping.dev/product/25",
+            "description": "Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Indulge your sweet tooth with our box of chocolate candy. Choose from a variety of flavors including zesty orange and sweet cherry",
+            "ranking_score": 0.40510265997936945
+        },
+        {
+            "title": "Box of Chocolate Candy - Cherry medium",
+            "url": "https://web-scraping.dev/product/25?variant=cherry-medium",
+            "description": "Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Choose from a variety of flavors including zesty orange and sweet cherry",
+            "ranking_score": 0.37425205178128584
+        }
+    ]
+}

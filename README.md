@@ -28,19 +28,6 @@ Exemple:
 ```PYTHON
 [
     {
-        "title": "web-scraping.dev product page 1",
-        "url": "https://web-scraping.dev/products/",
-        "first_paragraph": "",
-        "links": [
-            "https://web-scraping.dev/",
-            ...
-            "https://web-scraping.dev/product/5",
-            "https://web-scraping.dev/products?page=1",
-            "https://web-scraping.dev/products?page=2",
-            "https://web-scraping.dev/products?page=3"
-        ]
-    },
-    {
         "title": "web-scraping.dev product Box of Chocolate Candy",
         "url": "https://web-scraping.dev/product/1",
         "first_paragraph": "Indulge your sweet tooth with our Box of Chocolate Candy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Choose from a variety of flavors including zesty orange and sweet cherry. Whether you're looking for the perfect gift or just want to treat yourself, our Box of Chocolate Candy is sure to satisfy.",
@@ -52,7 +39,7 @@ Exemple:
             "https://web-scraping.dev/"
         ]
     },
-    ...
+    ....
 ]
 ```
 # Indexation-web (TP2)
@@ -76,11 +63,11 @@ python TP2/main.py
 ```
 
 
-## Résultat (Structure des indices)
+## Résultats (Structure des index)
 
 Le projet inclut trois types principaux d'indices, chacun ayant une structure spécifique :
 
-### 1. **Title/Description Index**  
+### 1. **Index inversé des titres et descriptions**  
 Un index inversé qui associe chaque mot aux positions où il apparaît dans un document spécifique.
 
 ```json
@@ -88,10 +75,9 @@ Un index inversé qui associe chaque mot aux positions où il apparaît dans un 
     {"url": "https://web-scraping.dev/product/1", "position": 0},
     {"url": "https://web-scraping.dev/product/13", "position": 3}
 ]   
-
 ```
 
-### 2. **Review Index**  
+### 2. **Index des avis**  
 Cet index stocke les informations sur les avis de produits. Il inclut le nombre d'avis, la note moyenne et la dernière note laissée.
 ```json
 {
@@ -103,7 +89,7 @@ Cet index stocke les informations sur les avis de produits. Il inclut le nombre 
 }
 ```
 
-### 3. **Feature Index**  
+### 3. **Index des caractéristiques**  
 Un index inversé qui associe une caractéristique de produit (par exemple, la marque) à des URL de documents.
 
 ```json
@@ -150,14 +136,16 @@ python TP3/main.py
 
 ## Résultats
 
+La recherche (query) est tokenizé. La présence d'un synonyme présent dans le fichier `TP3/data/origin_synonyms.json` ajoute des tokens synonymes à la query.
+
 Les résultats sont classé par pertinence selon l'algorithme BM25. 
 
 ```math
-\text{Score Total} = 10 \times \left( \text{Score BM25 du titre} + \frac{1}{\text{Position du terme de recherche dans le titre}} + 10 \times \mathbf{1}_{\text{Tous les termes de la recherche sont dans le titre}} \right) +
+\text{Score Total} = \\ 
+10 \times \left( \text{Score BM25 du titre} + \frac{1}{\text{Position du terme de recherche dans le titre}} + 10 \times \mathbf{1}_{\text{Tous les termes de la recherche sont dans le titre}} \right) \\ 
++ 5 \times \left( \text{Score BM25 de la description} + \frac{1}{\text{Position du terme de recherche dans la description}} + 10 \times \mathbf{1}_{\text{Tous les termes de la recherche sont dans la description}} \right)
 
-5 \times \left( \text{Score BM25 de la description} + \frac{1}{\text{Position du terme de recherche dans la description}} + 10 \times \mathbf{1}_{\text{Tous les termes de la recherche sont dans la description}} \right) +
-
-8 \times \text{Score BM25 de la marque} + 20 \times \text{Score BM25 du domaine} + \frac{\text{Note de l'article}}{5}
+\\ + 8 \times \text{Score BM25 de la marque}\\ + 20 \times \text{Score BM25 du domaine} \\+ \frac{\text{Note de l'article}}{5}
 ```
 
 Le poids le plus élevé est donné dans l'ordre par :
@@ -165,14 +153,11 @@ Le poids le plus élevé est donné dans l'ordre par :
 - le titre 
 - la marque
 - la description
-- la position des termes recherchés et la note de l'article
+- la note de l'article
 
-Les urls n'ayant pas de token en commun avec la requête sont filtrées et non notés. Donc seuls les documents, ayant au un token en commun avec la requête sont affichés.
+Les urls n'ayant pas de token en commun avec la requête sont filtrées et non notés. Donc seuls les documents, ayant au un token en commun avec la requête sont affichés dans les résultats.
 
-
-
-
-## Exemple de structure de sortie JSON
+Exemple :
 
 ```python
 {

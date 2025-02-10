@@ -1,0 +1,342 @@
+{
+    "query": "orange energy",
+    "total_documents": 56,
+    "filtered_documents": [
+        {
+            "title": "Box of Chocolate Candy - Orange small",
+            "url": "https://web-scraping.dev/product/1?variant=orange-small",
+            "description": "Choose from a variety of flavors including zesty orange and sweet cherry. Indulge your sweet tooth with our box of chocolate candy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 24.3553810230725
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange medium",
+            "url": "https://web-scraping.dev/product/25?variant=orange-medium",
+            "description": "Choose from a variety of flavors including zesty orange and sweet cherry. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy",
+            "ranking_score": 23.455111187057106
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange medium",
+            "url": "https://web-scraping.dev/product/13?variant=orange-medium",
+            "description": "Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Choose from a variety of flavors including zesty orange and sweet cherry",
+            "ranking_score": 22.806963038908957
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange large",
+            "url": "https://web-scraping.dev/product/1?variant=orange-large",
+            "description": "Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Choose from a variety of flavors including zesty orange and sweet cherry",
+            "ranking_score": 22.806963038908957
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange large",
+            "url": "https://web-scraping.dev/product/13?variant=orange-large",
+            "description": "Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Indulge your sweet tooth with our box of chocolate candy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 16.32431209604845
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange small",
+            "url": "https://web-scraping.dev/product/13?variant=orange-small",
+            "description": "Indulge your sweet tooth with our box of chocolate candy. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 16.32431209604845
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange medium",
+            "url": "https://web-scraping.dev/product/1?variant=orange-medium",
+            "description": "Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Indulge your sweet tooth with our box of chocolate candy",
+            "ranking_score": 16.32431209604845
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange large",
+            "url": "https://web-scraping.dev/product/25?variant=orange-large",
+            "description": "Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Indulge your sweet tooth with our box of chocolate candy",
+            "ranking_score": 16.32431209604845
+        },
+        {
+            "title": "Box of Chocolate Candy - Orange small",
+            "url": "https://web-scraping.dev/product/25?variant=orange-small",
+            "description": "Indulge your sweet tooth with our box of chocolate candy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy",
+            "ranking_score": 16.32431209604845
+        },
+        {
+            "title": "Blue Energy Potion",
+            "url": "https://web-scraping.dev/product/5",
+            "description": "It's more than just an energy drink - it's an ode to the gaming culture, packaged in an aesthetically pleasing potion-like bottle that'll make you feel like you're in your favorite game world. Drink up and game on!. Ignite your gaming sessions with our 'blue energy potion', a premium energy drink crafted for dedicated gamers",
+            "ranking_score": 14.855197476122775
+        },
+        {
+            "title": "Blue Energy Potion - One",
+            "url": "https://web-scraping.dev/product/5?variant=one",
+            "description": "It's more than just an energy drink - it's an ode to the gaming culture, packaged in an aesthetically pleasing potion-like bottle that'll make you feel like you're in your favorite game world. Inspired by the classic video game potions, this energy drink provides a much-needed boost to keep you focused and energized. Ignite your gaming sessions with our 'blue energy potion', a premium energy drink crafted for dedicated gamers",
+            "ranking_score": 14.463628558244547
+        },
+        {
+            "title": "Blue Energy Potion - One",
+            "url": "https://web-scraping.dev/product/17?variant=one",
+            "description": "It's more than just an energy drink - it's an ode to the gaming culture, packaged in an aesthetically pleasing potion-like bottle that'll make you feel like you're in your favorite game world. Ignite your gaming sessions with our 'blue energy potion', a premium energy drink crafted for dedicated gamers. Drink up and game on!",
+            "ranking_score": 14.388339299349997
+        },
+        {
+            "title": "Blue Energy Potion",
+            "url": "https://web-scraping.dev/product/17",
+            "description": "Drink up and game on!. Ignite your gaming sessions with our 'blue energy potion', a premium energy drink crafted for dedicated gamers. Inspired by the classic video game potions, this energy drink provides a much-needed boost to keep you focused and energized",
+            "ranking_score": 10.657548550128984
+        },
+        {
+            "title": "Dragon Energy Potion",
+            "url": "https://web-scraping.dev/product/6",
+            "description": "Fuel your gaming prowess with our 'dragon potion', an energy drink for those who dare to take on the greatest challenges. Packed with a fiery tropical flavor and a potent energy blend, this potion sets the stage for epic gaming sessions",
+            "ranking_score": 10.535606206004557
+        },
+        {
+            "title": "Red Energy Potion",
+            "url": "https://web-scraping.dev/product/4",
+            "description": "This fiery red potion delivers an explosive berry flavor and an energy kick that keeps you at the top of your game. Elevate your game with our 'red potion', an extraordinary energy drink that's as enticing as it is effective",
+            "ranking_score": 10.343765409430668
+        },
+        {
+            "title": "Red Energy Potion - One",
+            "url": "https://web-scraping.dev/product/4?variant=one",
+            "description": "Elevate your game with our 'red potion', an extraordinary energy drink that's as enticing as it is effective. This fiery red potion delivers an explosive berry flavor and an energy kick that keeps you at the top of your game",
+            "ranking_score": 10.085240565991224
+        },
+        {
+            "title": "Dragon Energy Potion",
+            "url": "https://web-scraping.dev/product/18",
+            "description": "Fuel your gaming prowess with our 'dragon potion', an energy drink for those who dare to take on the greatest challenges. Embrace the spirit of the dragon - play hard, play long",
+            "ranking_score": 10.078606442649422
+        },
+        {
+            "title": "Dragon Energy Potion - One",
+            "url": "https://web-scraping.dev/product/18?variant=one",
+            "description": "Fuel your gaming prowess with our 'dragon potion', an energy drink for those who dare to take on the greatest challenges. Packed with a fiery tropical flavor and a potent energy blend, this potion sets the stage for epic gaming sessions",
+            "ranking_score": 10.068748029231779
+        },
+        {
+            "title": "Blue Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/5?variant=six-pack",
+            "description": "Drink up and game on!. It's more than just an energy drink - it's an ode to the gaming culture, packaged in an aesthetically pleasing potion-like bottle that'll make you feel like you're in your favorite game world. Inspired by the classic video game potions, this energy drink provides a much-needed boost to keep you focused and energized",
+            "ranking_score": 10.063622394183627
+        },
+        {
+            "title": "Blue Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/17?variant=six-pack",
+            "description": "Drink up and game on!. Ignite your gaming sessions with our 'blue energy potion', a premium energy drink crafted for dedicated gamers. Inspired by the classic video game potions, this energy drink provides a much-needed boost to keep you focused and energized",
+            "ranking_score": 10.01342988848797
+        },
+        {
+            "title": "Red Energy Potion",
+            "url": "https://web-scraping.dev/product/28",
+            "description": "Are you ready to level up?. Elevate your game with our 'red potion', an extraordinary energy drink that's as enticing as it is effective",
+            "ranking_score": 9.975238526859503
+        },
+        {
+            "title": "Red Energy Potion",
+            "url": "https://web-scraping.dev/product/16",
+            "description": "This fiery red potion delivers an explosive berry flavor and an energy kick that keeps you at the top of your game. Are you ready to level up?",
+            "ranking_score": 9.952884743855158
+        },
+        {
+            "title": "Dragon Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/6?variant=six-pack",
+            "description": "Fuel your gaming prowess with our 'dragon potion', an energy drink for those who dare to take on the greatest challenges. Packed with a fiery tropical flavor and a potent energy blend, this potion sets the stage for epic gaming sessions",
+            "ranking_score": 9.891487544363542
+        },
+        {
+            "title": "Teal Energy Potion",
+            "url": "https://web-scraping.dev/product/15",
+            "description": "Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community. With its intriguing teal color and a flavor that keeps you asking for more, this potion is your best companion during those long gaming nights",
+            "ranking_score": 9.76984868741026
+        },
+        {
+            "title": "Red Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/28?variant=six-pack",
+            "description": "This fiery red potion delivers an explosive berry flavor and an energy kick that keeps you at the top of your game. Elevate your game with our 'red potion', an extraordinary energy drink that's as enticing as it is effective",
+            "ranking_score": 9.699646747789652
+        },
+        {
+            "title": "Teal Energy Potion",
+            "url": "https://web-scraping.dev/product/3",
+            "description": "Every sip is an adventure - let the quest begin!. Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community",
+            "ranking_score": 9.685027600998014
+        },
+        {
+            "title": "Red Energy Potion - One",
+            "url": "https://web-scraping.dev/product/28?variant=one",
+            "description": "This fiery red potion delivers an explosive berry flavor and an energy kick that keeps you at the top of your game. Are you ready to level up?",
+            "ranking_score": 9.48602656708238
+        },
+        {
+            "title": "Teal Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/15?variant=six-pack",
+            "description": "Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community. Every sip is an adventure - let the quest begin!",
+            "ranking_score": 9.398051796499857
+        },
+        {
+            "title": "Red Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/16?variant=six-pack",
+            "description": "Are you ready to level up?. Elevate your game with our 'red potion', an extraordinary energy drink that's as enticing as it is effective",
+            "ranking_score": 9.331119865218486
+        },
+        {
+            "title": "Red Energy Potion - One",
+            "url": "https://web-scraping.dev/product/16?variant=one",
+            "description": "Are you ready to level up?. This fiery red potion delivers an explosive berry flavor and an energy kick that keeps you at the top of your game",
+            "ranking_score": 9.315572021627833
+        },
+        {
+            "title": "Teal Energy Potion - One",
+            "url": "https://web-scraping.dev/product/3?variant=one",
+            "description": "Every sip is an adventure - let the quest begin!. Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community",
+            "ranking_score": 9.218169424225236
+        },
+        {
+            "title": "Red Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/4?variant=six-pack",
+            "description": "Are you ready to level up?. This fiery red potion delivers an explosive berry flavor and an energy kick that keeps you at the top of your game",
+            "ranking_score": 9.138311536759597
+        },
+        {
+            "title": "Dragon Energy Potion - One",
+            "url": "https://web-scraping.dev/product/6?variant=one",
+            "description": "Embrace the spirit of the dragon - play hard, play long. Fuel your gaming prowess with our 'dragon potion', an energy drink for those who dare to take on the greatest challenges",
+            "ranking_score": 9.135557789686167
+        },
+        {
+            "title": "Teal Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/3?variant=six-pack",
+            "description": "Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community. With its intriguing teal color and a flavor that keeps you asking for more, this potion is your best companion during those long gaming nights",
+            "ranking_score": 9.125730025769245
+        },
+        {
+            "title": "Dragon Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/18?variant=six-pack",
+            "description": "Embrace the spirit of the dragon - play hard, play long. Packed with a fiery tropical flavor and a potent energy blend, this potion sets the stage for epic gaming sessions",
+            "ranking_score": 8.978165340039784
+        },
+        {
+            "title": "Teal Energy Potion - One",
+            "url": "https://web-scraping.dev/product/15?variant=one",
+            "description": "With its intriguing teal color and a flavor that keeps you asking for more, this potion is your best companion during those long gaming nights. Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community",
+            "ranking_score": 8.838704796351768
+        },
+        {
+            "title": "Teal Energy Potion - One",
+            "url": "https://web-scraping.dev/product/27?variant=one",
+            "description": "With its intriguing teal color and a flavor that keeps you asking for more, this potion is your best companion during those long gaming nights. Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community",
+            "ranking_score": 8.838704796351768
+        },
+        {
+            "title": "Teal Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/27?variant=six-pack",
+            "description": "With its intriguing teal color and a flavor that keeps you asking for more, this potion is your best companion during those long gaming nights. Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community",
+            "ranking_score": 8.661444311483532
+        },
+        {
+            "title": "Dark Red Energy Potion",
+            "url": "https://web-scraping.dev/product/26",
+            "description": "Unleash the power within with our 'dark red potion', an energy drink as intense as the games you play. Bring out the best in your gaming performance, and unlock your full potential",
+            "ranking_score": 8.037162899114222
+        },
+        {
+            "title": "Box of Chocolate Candy",
+            "url": "https://web-scraping.dev/product/13",
+            "description": "Choose from a variety of flavors including zesty orange and sweet cherry. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Indulge your sweet tooth with our box of chocolate candy",
+            "ranking_score": 8.031068927024052
+        },
+        {
+            "title": "Dark Red Energy Potion",
+            "url": "https://web-scraping.dev/product/14",
+            "description": "Unleash the power within with our 'dark red potion', an energy drink as intense as the games you play. Its deep red color and bold cherry cola flavor are as inviting as they are invigorating",
+            "ranking_score": 7.98043332231637
+        },
+        {
+            "title": "Dark Red Energy Potion",
+            "url": "https://web-scraping.dev/product/2",
+            "description": "Unleash the power within with our 'dark red potion', an energy drink as intense as the games you play. Its deep red color and bold cherry cola flavor are as inviting as they are invigorating",
+            "ranking_score": 7.98043332231637
+        },
+        {
+            "title": "Teal Energy Potion",
+            "url": "https://web-scraping.dev/product/27",
+            "description": "Every sip is an adventure - let the quest begin!. With its intriguing teal color and a flavor that keeps you asking for more, this potion is your best companion during those long gaming nights",
+            "ranking_score": 7.676869684875394
+        },
+        {
+            "title": "Dark Red Energy Potion - One",
+            "url": "https://web-scraping.dev/product/14?variant=one",
+            "description": "Unleash the power within with our 'dark red potion', an energy drink as intense as the games you play. Bring out the best in your gaming performance, and unlock your full potential",
+            "ranking_score": 7.6487734952941215
+        },
+        {
+            "title": "Dark Red Energy Potion - One",
+            "url": "https://web-scraping.dev/product/2?variant=one",
+            "description": "Unleash the power within with our 'dark red potion', an energy drink as intense as the games you play. Bring out the best in your gaming performance, and unlock your full potential",
+            "ranking_score": 7.6487734952941215
+        },
+        {
+            "title": "Box of Chocolate Candy - Cherry medium",
+            "url": "https://web-scraping.dev/product/13?variant=cherry-medium",
+            "description": "Indulge your sweet tooth with our box of chocolate candy. Choose from a variety of flavors including zesty orange and sweet cherry. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 7.614402260357384
+        },
+        {
+            "title": "Dark Red Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/14?variant=six-pack",
+            "description": "Unleash the power within with our 'dark red potion', an energy drink as intense as the games you play. Its deep red color and bold cherry cola flavor are as inviting as they are invigorating",
+            "ranking_score": 7.441107438256109
+        },
+        {
+            "title": "Dark Red Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/2?variant=six-pack",
+            "description": "Unleash the power within with our 'dark red potion', an energy drink as intense as the games you play. Its deep red color and bold cherry cola flavor are as inviting as they are invigorating",
+            "ranking_score": 7.441107438256109
+        },
+        {
+            "title": "Box of Chocolate Candy - Cherry large",
+            "url": "https://web-scraping.dev/product/25?variant=cherry-large",
+            "description": "Choose from a variety of flavors including zesty orange and sweet cherry. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 7.130799091008658
+        },
+        {
+            "title": "Dark Red Energy Potion - Six pack",
+            "url": "https://web-scraping.dev/product/26?variant=six-pack",
+            "description": "Its deep red color and bold cherry cola flavor are as inviting as they are invigorating. Unleash the power within with our 'dark red potion', an energy drink as intense as the games you play",
+            "ranking_score": 7.039321723970395
+        },
+        {
+            "title": "Box of Chocolate Candy - Cherry large",
+            "url": "https://web-scraping.dev/product/1?variant=cherry-large",
+            "description": "Indulge your sweet tooth with our box of chocolate candy. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Choose from a variety of flavors including zesty orange and sweet cherry",
+            "ranking_score": 6.7797775252941435
+        },
+        {
+            "title": "Box of Chocolate Candy",
+            "url": "https://web-scraping.dev/product/25",
+            "description": "Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Indulge your sweet tooth with our box of chocolate candy. Choose from a variety of flavors including zesty orange and sweet cherry",
+            "ranking_score": 6.7797775252941435
+        },
+        {
+            "title": "Box of Chocolate Candy - Cherry large",
+            "url": "https://web-scraping.dev/product/13?variant=cherry-large",
+            "description": "Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Choose from a variety of flavors including zesty orange and sweet cherry. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 6.575243535453103
+        },
+        {
+            "title": "Box of Chocolate Candy - Cherry small",
+            "url": "https://web-scraping.dev/product/1?variant=cherry-small",
+            "description": "Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Choose from a variety of flavors including zesty orange and sweet cherry. Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling",
+            "ranking_score": 6.575243535453103
+        },
+        {
+            "title": "Box of Chocolate Candy - Cherry medium",
+            "url": "https://web-scraping.dev/product/25?variant=cherry-medium",
+            "description": "Each box contains an assortment of rich, flavorful chocolates with a smooth, creamy filling. Whether you're looking for the perfect gift or just want to treat yourself, our box of chocolate candy is sure to satisfy. Choose from a variety of flavors including zesty orange and sweet cherry",
+            "ranking_score": 6.482650942860509
+        },
+        {
+            "title": "Dark Red Energy Potion - One",
+            "url": "https://web-scraping.dev/product/26?variant=one",
+            "description": "Bring out the best in your gaming performance, and unlock your full potential. Its deep red color and bold cherry cola flavor are as inviting as they are invigorating",
+            "ranking_score": 5.366084356567712
+        }
+    ]
+}
