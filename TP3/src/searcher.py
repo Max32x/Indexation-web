@@ -14,7 +14,7 @@ def expand_query_with_synonyms(query):
         list: An expanded list of query tokens, including synonyms.
 
     Exemple:
-        >>> expand_query_with_synonyms("USA Box" 
+        >>> expand_query_with_synonyms("USA Box" )
         ['united states', 'usa', 'box', 'united states of america', 'america']    
     """
 
