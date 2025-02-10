@@ -2,6 +2,7 @@ from src.searcher import search_feature
 from src.tokenizer import tokenize
 from src.filtering import assert_all_tokens_in_index
 from src.data_loader import get_doc_feature
+from src.data_exporter import export_query_results_to_json
 import math
 
 def compute_bm25(query_tokens, doc_feature, feature, index, k1=1.5, b=0.75):
@@ -35,18 +36,15 @@ def compute_bm25(query_tokens, doc_feature, feature, index, k1=1.5, b=0.75):
     total_url_count = len(unique_urls)
 
     # Calculate the total length of all documents
-    total_length = sum(len(get_doc_feature(url, feature).split()) for url in index.keys())
+    total_length = sum(len(get_doc_feature(url, feature).split()) for url in unique_urls)
 
     # Compute the average document length
     avg_doc_length = total_length / total_url_count
 
-
-    # avg_doc_length = sum(len(get_doc_feature(url,feature).split()) for url in index.keys()) / total_url_count
-
     # print('---')
     # print(doc_feature)
     # print(doc_length)
-    # print(avg_doc_length) #problème
+    # print(avg_doc_length)
     # print(total_url_count)
     
     score = 0
@@ -85,17 +83,25 @@ def rank_documents_feature(query, feature):
     scores = {}
 
     for _, list_urls in filtered_index.items():
+        
+        # print(list_urls)
+
         # if feature = title or description, list_urls is a dict, it's a list otherwise
         for doc_url in (list_urls.keys() if feature in ["title", "description"] else list_urls): 
             doc_feature = get_doc_feature(doc_url, feature)
             score = compute_bm25(query_tokens, doc_feature, feature, filtered_index)
+
+            if feature in ["title", "description"]:
+                position = list_urls[doc_url][0]
+                # print(doc_url, position)
+                score += 1 / (position +1) #+1 POUR EVITER LA DIVISION PAR 0
 
             # print(query_tokens,'||||', doc_feature)
 
             if assert_all_tokens_in_index(query_tokens, doc_feature):
                 score += 10  # Bonus pour les matchs exacts
 
-            print(score)
+            # print(score)
 
             scores[doc_url] = score
 
@@ -129,13 +135,13 @@ def rank_documents(query):
 
     for feature in FEATURES:
 
-        print('======================')
-        print(feature)
+        # print('======================')
+        # print(feature)
     
 
         # Calculer les scores pour chaque feature
         feature_scores = rank_documents_feature(query, feature)
-        print(sorted(feature_scores.items(), key=lambda x: x[1], reverse=True))
+        # print(sorted(feature_scores.items(), key=lambda x: x[1], reverse=True))
 
         # Ajouter les scores pondérés pour chaque URL
         for doc_url, score in feature_scores.items():
@@ -143,12 +149,14 @@ def rank_documents(query):
                 
                 mean_mark = get_doc_feature(doc_url, "review")
                 if mean_mark:
-                    total_scores[doc_url] = mean_mark/5
+                    total_scores[doc_url] = mean_mark/5 #Léger bonus pour les articles avec un avis
                 total_scores[doc_url] = 0
 
             total_scores[doc_url] += score * COEFFICIENTS[feature]
 
     # Trier les documents par score décroissant
     ranked_docs = sorted(total_scores.items(), key=lambda x: x[1], reverse=True)
+
+    export_query_results_to_json(query, ranked_docs)
 
     return ranked_docs
