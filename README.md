@@ -18,7 +18,7 @@ python TP1/main.py
 
 ## Utilisation
 
-Pour utiliser le crawler, exécutez le fichier `main.py` avec Python.
+Pour utiliser le crawler, exécuter le fichier `main.py` avec Python.
 
 ## Résultat
 
@@ -47,7 +47,7 @@ Exemple:
 
 ## Description
 
-Ce projet crée des index inversé à partir d'un document semblable à celui généré par le TP1
+Ce projet crée des **indexs inversés** à partir d'un document semblable à celui généré par le TP1.
 
 
 ## Installation
