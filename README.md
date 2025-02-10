@@ -75,6 +75,7 @@ pip install -r requirements.txt
 python TP2/main.py
 ```
 
+
 ## Résultat (Structure des indices)
 
 Le projet inclut trois types principaux d'indices, chacun ayant une structure spécifique :
@@ -126,7 +127,7 @@ Ces fichiers sont sauvegardés dans le dossier `TP2/data/inverted_indexes`.
 
 ## Description
 
-Ce projet permet de classer les documents indexés en fonction de leur pertinence à l'aide de l'algorithme BM25. Les documents peuvent être filtrés et scorés en fonction de différentes caractéristiques telles que le titre, la description, la marque et le domaine.
+Ce projet permet de classer les documents indexés en fonction de leur pertinence à l'aide de l'algorithme BM25. Les documents obtinnent une note de pertinence en fonction de différentes caractéristiques telles que le titre, la description, la marque et le domaine, les avis, la postion des termes.
 
 ## Installation
 
@@ -136,24 +137,40 @@ cd Indexation-web
 pip install -r requirements.txt
 ```
 
-```bash
-python TP3/main.py
-```
 
 ## Utilisation
 
-Pour classer les documents en fonction d'une requête, lancez simplement le fichier `main.py`. L'algorithme calcule les scores BM25 en fonction des différentes caractéristiques des documents, leur position dans les descriptions et leur pertinence globale.
+Pour classer les documents en fonction d'une requête, il faut éditer dans le fichier `TP3/main.py`, la requête représentée par la variable `query`.
+
+On peut alors executer le script :
+
+```bash
+python TP3/main.py
+```
 
 ## Résultats
 
 Les résultats sont classé par pertinence selon l'algorithme BM25. 
 
-score total = 10 * score_bm25 du titre  + 
-5 * score_bm25 de la description +
-8 * score_bm25 de la marque + 
-20 * score_bm25 du domaine + 
-note de l'article / 5
- 
+```math
+\text{Score Total} = 10 \times \left( \text{Score BM25 du titre} + \frac{1}{\text{Position du terme de recherche dans le titre}} + 10 \times \mathbf{1}_{\text{Tous les termes de la recherche sont dans le titre}} \right) +
+
+5 \times \left( \text{Score BM25 de la description} + \frac{1}{\text{Position du terme de recherche dans la description}} + 10 \times \mathbf{1}_{\text{Tous les termes de la recherche sont dans la description}} \right) +
+
+8 \times \text{Score BM25 de la marque} + 20 \times \text{Score BM25 du domaine} + \frac{\text{Note de l'article}}{5}
+```
+
+Le poids le plus élevé est donné dans l'ordre par :
+- le nom de domaine 
+- le titre 
+- la marque
+- la description
+- la position des termes recherchés et la note de l'article
+
+Les urls n'ayant pas de token en commun avec la requête sont filtrées et non notés. Donc seuls les documents, ayant au un token en commun avec la requête sont affichés.
+
+
+
 
 ## Exemple de structure de sortie JSON
 
