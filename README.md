@@ -136,7 +136,7 @@ python TP3/main.py
 
 ## Résultats
 
-La recherche (query) est tokenizé. La présence d'un synonyme présent dans le fichier `TP3/data/origin_synonyms.json` ajoute des tokens synonymes à la query.
+La recherche (query) est transformée en token. La présence d'un synonyme présent dans le fichier `TP3/data/origin_synonyms.json` ajoute des tokens synonymes à la query.
 
 Les résultats sont classé par pertinence selon l'algorithme BM25. 
 
