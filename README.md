@@ -25,7 +25,7 @@ Pour utiliser le crawler, exécutez le fichier `main.py` avec Python.
 Le résultat est sauvegardé dans le fichier `TP1/data/results-TP1.json`.
 
 Exemple: 
-```json
+```PYTHON
 [
     {
         "title": "web-scraping.dev product page 1",
@@ -33,7 +33,7 @@ Exemple:
         "first_paragraph": "",
         "links": [
             "https://web-scraping.dev/",
-            ....
+            ...
             "https://web-scraping.dev/product/5",
             "https://web-scraping.dev/products?page=1",
             "https://web-scraping.dev/products?page=2",
